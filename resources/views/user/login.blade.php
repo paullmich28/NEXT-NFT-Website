@@ -24,17 +24,14 @@
 <body>
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="wrap-login100">
-				
+			<div class="wrap-login100 bg-dark">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">
+					<img src="images/loginasset.png" alt="IMG">
 				</div>
-
-				
-
 				<form class="login100-form validate-form" method="POST" action="{{route('loginProc')}}">
 					@csrf
-					<span class="login100-form-title">
+					<a href="{{route('homepage')}}" class="d-flex justify-content-end">Go Back</a>
+					<span class="login100-form-title text-white">
 						Login Page
 					</span>
 					
@@ -70,17 +67,18 @@
 						<span class="txt1">
 							Forgot
 						</span>
-						<a class="txt2" href="#">
+						<a class="txt2 text-white" href="#">
 							Username / Password?
 						</a>
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="{{route('register')}}">
+						<a class="txt2 text-white" href="{{route('register')}}">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>
+					
 				</form>
 			</div>
 		</div>
