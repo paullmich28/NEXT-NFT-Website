@@ -1,0 +1,171 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+.c-item{
+    height: 95vh;
+    min-height: 300px;
+}
+
+.c-img{
+    height: 100%;
+    object-fit: cover;
+    background-size: contain;
+    filter: brightness(0.4);
+}
+
+.half-font{
+    color: rgb(102, 136, 113);
+}
+
+.carousel-caption{
+    top: 40vh;
+    z-index: 2;
+}
+
+.carousel-caption .buttons{
+    padding: 0.5em;
+    font-size: 20px;
+}
+
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 23px;
+    line-height: 1.9;
+}
+
+.navbar-nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-brand{
+    color: rgb(141, 115, 115);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar-dark .navbar-brand:focus,
+.navbar-dark .navbar-brand:hover{
+    transition: all 1s ease;
+    color: white;
+}
+
+.navbar-dark .navbar-nav .navbar-link{
+    color: #000;
+}
+
+.w-100{
+    height: 100vh;
+}
+
+.section-padding{
+    padding: 100px 0;
+}
+
+.scrolled{
+    background-color: rgba(52, 58, 64, 0.9);
+    transition: all 0.5s ease;
+}
+
+.form{
+    margin-top: 10em;
+}
+
+.ig{
+    font-size: 2em;
+}
+
+.scroll{
+    width: 120%;
+    position: absolute;
+    display: flex;
+    background: #8a7948;
+    border: solid #000;
+}
+
+.scroll div{
+    color: #000;
+    font-size: 2em;
+    white-space: nowrap;
+    font-weight: 900;
+    animation: animate1 10s linear infinite;
+}
+
+.scroll.text{
+    transform: rotate(2.5deg) translateY(-30px) translateX(-5px);
+}
+
+.positioning1{
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+    .scroll div{
+        color: #000;
+        font-size: 2em;
+        white-space: nowrap;
+        font-weight: 900;
+        animation: animate2 10s linear infinite;
+    }
+
+    .carousel-caption h5{
+        font-size: 40px;
+    }
+
+    .carousel-caption p{
+        font-size: 25px;
+        width: 100%;
+    }
+
+    .navbar-nav a{
+        width: 50%;
+    }
+
+    .form h5{
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .card{
+        width: 150%;
+        right: 3em;
+    }
+
+}
+
+@keyframes animate1{
+    0%{
+        transform: translateX(1010%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2{
+    0%{
+        transform: translateX(440%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
