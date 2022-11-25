@@ -21,11 +21,11 @@ class UserController extends Controller
     }
 
     public function loginRoute(){
-        return view('user.login');
+        return view('admin.login');
     }
 
     public function registerRoute(){
-        return view('user.register');
+        return view('admin.register');
     }
 
     public function loginProcess(Request $request){
@@ -70,7 +70,7 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        $request->validate([
+        /* $request->validate([
             'name' => 'required',
             'username' => 'required',
             'email' => 'required|email|unique:users',
@@ -90,7 +90,7 @@ class UserController extends Controller
         
         $user->save();
 
-        return Redirect::route('login')->with('status', 'Sukses');
+        return Redirect::route('login')->with('status', 'Sukses'); */
     }
 
     public function logout(){

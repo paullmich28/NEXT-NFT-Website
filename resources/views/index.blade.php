@@ -1,8 +1,8 @@
 @include('extends.header')
 <body id="bodyHome">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#" id="main">
+        <div class="container pb-2 pt-2">
+            <a class="navbar-brand fs-4" href="#" id="main">
                 Ne<span class="half-font">xt</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Catalog</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a href="#">
@@ -76,40 +76,4 @@
     
     <section class="aboutus section-padding bg-info">
     </section>
-    
-    <script>
-        /* function checkingWindow(){
-            let login = document.querySelector("#login");
-            let register = document.querySelector("#register");
-    
-            if(window.innerWidth >= 576 && window.innerWidth <= 992){
-                login.classList.remove("btn-outline-success");
-                login.classList.add("btn-success");
-                login.classList.add("mx-auto");
-                login.classList.add("mt-2");
-    
-                register.classList.remove("btn-outline-primary");
-                register.classList.add("btn-primary");
-                register.classList.add("mx-auto");
-                register.classList.add("mt-2");
-            }else{
-                login.classList.add("btn-outline-success");
-                login.classList.remove("btn-success");
-                login.classList.remove("mx-auto");
-                login.classList.remove("mt-2");
-    
-                register.classList.add("btn-outline-primary");
-                register.classList.remove("btn-primary");
-                register.classList.remove("mx-auto");
-                register.classList.remove("mt-2");
-            }
-        } */
-    
-        $(window).scroll(function(){
-            $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
-        });
-    
-        window.onload = checkingWindow;
-        setInterval(checkingWindow, 500);
-    </script>
 @include('extends.footer')

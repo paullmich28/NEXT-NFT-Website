@@ -9,6 +9,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <link href="https://fonts.cdnfonts.com/css/witcher-handwriting" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/grim-reaper-2" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>

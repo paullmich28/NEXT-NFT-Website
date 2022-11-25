@@ -17,15 +17,19 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [UserController::class, 'index'])->name('homepage');
 
-/* Auth::routes(); */
+Auth::routes();
 
-/* Route::middleware(['guest:web'])->group(function(){
+Route::middleware(['guest:web'])->group(function(){
     Route::get('/login', [UserController::class, 'loginRoute'])->name('login');
-    Route::get('/register', [UserController::class, 'registerRoute'])->name('register');
-    Route::post('/register/process', [UserController::class, 'create'])->name('register_process');
     Route::post('/loginproc', [UserController::class, 'loginProcess'])->name('loginProc');
+
+/*     Route::get('/register', [UserController::class, 'registerRoute'])->name('register');
+    Route::post('/register/process', [UserController::class, 'create'])->name('register_process'); */
 });
 
 Route::middleware(['auth:web'])->group(function(){
-    Route::post('/user/logout', [UserController::class, 'logout'])->name('user_logout');
-}); */
+    Route::post('/admin/logout', [UserController::class, 'logout'])->name('user_logout');
+    /* Route::get('/admin/home', function () {
+        return 'test';
+    }); */
+});
