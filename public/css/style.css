@@ -6,8 +6,46 @@ html, body{
     overflow-x: hidden;
 }
 
+#bodyHome{
+    background-color: black;
+}
+
+.trigger{
+    position: relative;
+}
+
+.overlay{
+    color:#fff;
+    position:absolute;
+    background-color: black;
+    text-align: left;
+    padding: 1em;
+    z-index:2;
+    left:0;
+    margin-top: 35em;
+    width:35%;
+    height: 15em;
+}
+
+.redirect{
+    width: 75%;
+    font-size: 25px;
+}
+
+.desc{
+    width: 70%;
+}
+
+.nav-link{
+    color: yellow;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
 .c-item{
-    height: 95vh;
+    height: 85vh;
     min-height: 300px;
 }
 
@@ -79,7 +117,7 @@ html, body{
 }
 
 .scrolled{
-    background-color: rgba(52, 58, 64, 0.9);
+    background-color: black;
     transition: all 0.5s ease;
 }
 
@@ -106,6 +144,8 @@ html, body{
     font-weight: 900;
     animation: animate1 10s linear infinite;
 }
+
+
 
 .scroll.text{
     transform: rotate(2.5deg) translateY(-30px) translateX(-5px);
