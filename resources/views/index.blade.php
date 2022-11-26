@@ -14,7 +14,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Catalog</a>
+                        <a class="nav-link" href="{{route('catalog')}}">Catalog</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a href="#">
@@ -71,9 +71,4 @@
         </div>
     </div>
 
-    <section id="about" class="about section-padding">
-    </section>
-    
-    <section class="aboutus section-padding bg-info">
-    </section>
 @include('extends.footer')

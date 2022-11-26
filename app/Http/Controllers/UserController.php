@@ -97,6 +97,10 @@ class UserController extends Controller
         Auth::guard('web')->logout();
         return redirect('/');
     }
+    
+    public function catalogshow(){
+        return view('catalog');
+    }
 
     /**
      * Store a newly created resource in storage.

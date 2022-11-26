@@ -22,6 +22,7 @@ Auth::routes();
 Route::middleware(['guest:web'])->group(function(){
     Route::get('/login', [UserController::class, 'loginRoute'])->name('login');
     Route::post('/loginproc', [UserController::class, 'loginProcess'])->name('loginProc');
+    Route::get('/catalog', [UserController::class, 'catalogshow'])->name('catalog');
 
 /*     Route::get('/register', [UserController::class, 'registerRoute'])->name('register');
     Route::post('/register/process', [UserController::class, 'create'])->name('register_process'); */

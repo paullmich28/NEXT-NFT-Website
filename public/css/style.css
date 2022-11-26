@@ -18,13 +18,13 @@ html, body{
     color:#fff;
     position:absolute;
     background-color: black;
-    text-align: left;
+    text-align: center;
     padding: 1em;
     z-index:2;
-    left:0;
-    margin-top: 35em;
-    width:35%;
+    width:50%;
+    top: 50%;
     height: 15em;
+    transform: translate(50%,250%);
 }
 
 .redirect{
@@ -32,9 +32,6 @@ html, body{
     font-size: 25px;
 }
 
-.desc{
-    width: 70%;
-}
 
 .nav-link{
     color: yellow;
@@ -157,6 +154,11 @@ html, body{
     z-index: 2;
 }
 
+.vr{
+    border-left: 2px solid yellow;
+    height: 500px;
+}
+
 @media (min-width: 576px) and (max-width: 992px){
     .scroll div{
         color: #000;
@@ -187,6 +189,19 @@ html, body{
     .card{
         width: 150%;
         right: 3em;
+    }
+
+    .overlay{
+        color:#fff;
+        position:absolute;
+        background-color: black;
+        text-align: center;
+        padding: 1em;
+        z-index:2;
+        width:75%;
+        top: 50%;
+        height: 15em;
+        transform: translate(20%,250%);
     }
 
 }
