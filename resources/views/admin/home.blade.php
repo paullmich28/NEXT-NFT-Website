@@ -18,22 +18,31 @@
                     </li>
                     <li class="nav-item mx-2">
                         <a href="#">
-                            <img src="images/ig.jpg" alt="instagram" width="45" height="45" class="rounded-circle border border-2 border-white">
+                            <img src="/images/ig.jpg" alt="instagram" width="45" height="45" class="rounded-circle border border-2 border-white">
                         </a>
                     </li>
                     <li class="nav-item mx-2">
                         <a href="#">
-                            <img src="images/opensea.png" alt="opensea" width="45" height="45" class="rounded-circle border border-2 border-white">
+                            <img src="/images/opensea.png" alt="opensea" width="45" height="45" class="rounded-circle border border-2 border-white">
                         </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{Auth::guard('web')->user()->name}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile Detail</a></li>
+                            <li>
+                                <a href="{{route('user_logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-item">Logout</a>
+                                <form action="{{route('user_logout')}}" id="logout-form" method="POST">
+                                    @csrf
+                                </form>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    {{-- <p>{{Auth::guard('web')->user()->name}}</p>
-    <p>{{Auth::guard('web')->user()->username}}</p>
-    <a href="{{route('user_logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
-    <form action="{{route('user_logout')}}" id="logout-form" method="POST">
-        @csrf
-    </form> --}}
 @include('extends.footer')

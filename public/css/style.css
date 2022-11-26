@@ -162,6 +162,17 @@ html, body{
     font-size: 20px;
 }
 
+.dropdown-menu{
+    width: 150%;
+}
+
+.dropdown-item:hover{
+    width: fit-content;
+    border-radius: 0.4em;
+    color: yellowgreen;
+    transition: 0.2s ease;
+}
+
 @media (min-width: 576px) and (max-width: 992px){
     .scroll div{
         color: #000;
