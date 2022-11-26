@@ -30,7 +30,6 @@ Route::middleware(['guest:web'])->group(function(){
 
 Route::middleware(['auth:web'])->group(function(){
     Route::post('/admin/logout', [UserController::class, 'logout'])->name('user_logout');
-    /* Route::get('/admin/home', function () {
-        return 'test';
-    }); */
+    Route::get('/admin/home', [UserController::class, 'adminHome'])->name('admin_home');
+    Route::get('/admin/catalog', [UserController::class, 'adminCatalog'])->name('admin_catalog');
 });

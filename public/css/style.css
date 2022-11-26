@@ -131,8 +131,8 @@ html, body{
     width: 120%;
     position: absolute;
     display: flex;
-    background: #8a7948;
-    border: solid #000;
+    background: yellowgreen;
+    border: solid #8a7948;
 }
 
 .scroll div{
@@ -142,7 +142,6 @@ html, body{
     font-weight: 900;
     animation: animate1 10s linear infinite;
 }
-
 
 
 .scroll.text{
@@ -157,6 +156,10 @@ html, body{
 .vr{
     border-left: 2px solid yellow;
     height: 500px;
+}
+
+.iconContact{
+    font-size: 20px;
 }
 
 @media (min-width: 576px) and (max-width: 992px){

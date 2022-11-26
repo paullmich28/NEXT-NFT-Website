@@ -28,6 +28,10 @@ class UserController extends Controller
         return view('admin.register');
     }
 
+    public function adminHome(){
+        return view('admin.home');
+    }
+
     public function loginProcess(Request $request){
         $request->validate([
             'email' => 'required|email',
@@ -36,7 +40,11 @@ class UserController extends Controller
 
         $check = $request->only('email', 'password');
         if(Auth::guard('web')->attempt($check)){
-            return redirect()->route('homepage')->with('status', 'online');
+            if(Auth::guard('web')->user()->is_admin){
+                return redirect()->route('admin_home')->with('status', 'admin');
+            }else{
+                return redirect()->route('homepage')->with('status', 'user');
+            }
         }else{
             return route('homepage');
         }

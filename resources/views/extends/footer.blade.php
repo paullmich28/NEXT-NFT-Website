@@ -2,42 +2,12 @@
         <div class="container text-center text-md-left">
             <div class="row text-center text-md-left">
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">NEXT</h5>
                     <p>
-                        Sample Text. Lorem ipsum dolor sit amet, 
-                        ital consectetur lorem ipsum dolor sit amet adipisicing elit.
+                        © 2022 NEXT Corp. All rights reserved.
                     </p>
                 </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">TheProviders</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">TheProviders</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">TheProviders</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">TheProviders</a>
-                    </p>
-                </div>
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">TheProviders</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">TheProviders</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">TheProviders</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">TheProviders</a>
-                    </p>
-                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3"></div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3"></div>
             </div>
         </div>
     </footer>

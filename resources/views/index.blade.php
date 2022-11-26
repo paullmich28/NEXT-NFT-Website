@@ -33,9 +33,9 @@
 
     <div class="container trigger">
         <div class="overlay rounded">
-            <h3 class="desc">Lorem Ipsum dolor sit amet</h3>
+            <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
             <form action="#">
-                <input type="submit" value="Enter the world" class="redirect btn btn-warning mt-4">
+                <input type="submit" value="Enter the world" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">
             </form>
         </div>
     </div>
