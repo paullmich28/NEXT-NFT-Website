@@ -14,12 +14,10 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [UserController::class, 'index'])->name('homepage');
-
 Auth::routes();
 
 Route::middleware(['guest:web'])->group(function(){
+    Route::get('/', [UserController::class, 'index'])->name('homepage');
     Route::get('/login', [UserController::class, 'loginRoute'])->name('login');
     Route::post('/loginproc', [UserController::class, 'loginProcess'])->name('loginProc');
     Route::get('/catalog', [UserController::class, 'catalogshow'])->name('catalog');

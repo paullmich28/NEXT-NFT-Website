@@ -173,6 +173,14 @@ html, body{
     transition: 0.2s ease;
 }
 
+.bgInput{
+    background-color: rgb(219, 208, 44);
+    height: 50vh;
+    width: 30vh;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
 @media (min-width: 576px) and (max-width: 992px){
     .scroll div{
         color: #000;

@@ -1,4 +1,5 @@
 @include('extends.header')
+@livewireStyles
 <body id="bodyHome">
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container pb-2 pt-2">
@@ -30,15 +31,7 @@
             </div>
         </div>
     </nav>
-    <div class="container d-flex">
-        <div class="m-3">
-            <ul>
-                <li>Test</li>
-            </ul>
-        </div>
-       <div class="vr"></div>
-    </div>
-    
-    
-
+    @livewire('products')   
+    <hr style="color: white"/>
+    @livewireScripts 
 @include('extends.footer')
