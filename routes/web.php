@@ -18,6 +18,7 @@ Auth::routes();
 
 Route::middleware(['guest:web'])->group(function(){
     Route::get('/', [UserController::class, 'index'])->name('homepage');
+    Route::get('/home', [UserController::class, 'homepageRedirect'])->name('index');
     Route::get('/login', [UserController::class, 'loginRoute'])->name('login');
     Route::post('/loginproc', [UserController::class, 'loginProcess'])->name('loginProc');
     Route::get('/catalog', [UserController::class, 'catalogshow'])->name('catalog');

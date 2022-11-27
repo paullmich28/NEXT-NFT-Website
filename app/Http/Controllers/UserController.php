@@ -49,27 +49,10 @@ class UserController extends Controller
             return route('homepage');
         }
     }
-    
-    /* public function loginProses(Request $request){
-        request()->validate(
-            [
-                'username' => 'required',
-                'password' => 'required'
-            ]
-        );
 
-        $kredensil = $request->only('username', 'password');
-        
-        if(Auth::attempt($kredensil)){
-            $user = Auth::user();
-            if($user->is_admin){
-                return redirect()->intended('admin');
-            }else{
-                return redirect()->intended('homepage');
-            }
-        }
-        return redirect('login');
-    } */
+    public function homepageRedirect(){
+        return view('home');
+    }
 
     /**
      * Show the form for creating a new resource.
