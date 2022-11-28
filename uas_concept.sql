@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2022 at 09:01 AM
+-- Generation Time: Nov 28, 2022 at 08:09 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -58,7 +58,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2014_10_12_100000_create_password_resets_table', 1),
 (7, '2019_08_19_000000_create_failed_jobs_table', 1),
 (8, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(10, '2022_11_27_070352_create_products_table', 2);
+(11, '2022_11_27_070352_create_products_table', 2);
 
 -- --------------------------------------------------------
 
@@ -100,6 +100,7 @@ CREATE TABLE `personal_access_tokens` (
 CREATE TABLE `products` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -108,11 +109,13 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Superman', NULL, NULL),
-(2, 'Spiderman', NULL, NULL),
-(3, 'Iron Man', NULL, NULL),
-(4, 'Black Panther', NULL, NULL);
+INSERT INTO `products` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
+(1, 'Spiderman', 'Web_of_Spider-Man_Vol_1_129-1.png', '2022-11-27 23:31:32', '2022-11-27 23:31:32'),
+(2, 'Doctor Strange', 'Stephen_Strange_(Earth-199999)_from_Doctor_Strange_(film)_002.jpg', '2022-11-27 23:35:05', '2022-11-27 23:35:05'),
+(3, 'Superman', '202110181428-main.cropped_1634542148.jpg', '2022-11-27 23:38:09', '2022-11-27 23:38:09'),
+(4, 'Batman', 'Batman_-_Justice_League_-_promo.jpg', '2022-11-27 23:44:49', '2022-11-27 23:44:49'),
+(5, 'Shaggy', 'l-intro-1637688577.jpg', '2022-11-27 23:48:47', '2022-11-27 23:48:47'),
+(6, 'Kira Yoshikage', 'Scarykira.png', '2022-11-27 23:51:36', '2022-11-27 23:51:36');
 
 -- --------------------------------------------------------
 
@@ -138,8 +141,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `password`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(6, 'Paulus Michael', 'paullmich28', 'paullmich28@gmail.com', NULL, '$2y$10$rfyKJqINWI319i4MV60Lfuo8cXGWBgf1Q1zD.fpCVFiMmP5pf4aIm', 1, NULL, '2022-11-23 03:04:28', '2022-11-23 03:04:28'),
-(7, 'Paul van der Sar', 'VDSP', 'paulvds@gmail.com', NULL, '$2y$10$KUdlNxBYxFkJ9hlvJ6lbSe.P/YFARGCVZrbkiHadMTbpNGroZYl9e', 0, NULL, '2022-11-23 05:37:06', '2022-11-23 05:37:06');
+(6, 'Paulus', 'paullmich28', 'paullmich28@gmail.com', NULL, '$2y$10$aOw2aqRIdSkewnug1Yyu1OhkvrjKA31o4ad8R3M6dFFZlC8UW1cn2', 1, NULL, '2022-11-23 03:04:28', '2022-11-27 21:51:13');
 
 --
 -- Indexes for dumped tables
@@ -199,7 +201,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -211,7 +213,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
