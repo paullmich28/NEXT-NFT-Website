@@ -32,6 +32,5 @@
         </div>
     </nav>
     @livewire('products')   
-    <hr style="color: white"/>
     @livewireScripts 
 @include('extends.footer')

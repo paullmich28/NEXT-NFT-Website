@@ -38,6 +38,8 @@
 					
 					@if(Session::has('status'))
 						<div class="alert alert-success">{{Session::get('status')}}</div>
+					@elseif(Session::has('fail'))
+						<div class="alert alert-danger">{{Session::get('fail')}}</div>
 					@endif
 
 					<div class="wrap-input100">

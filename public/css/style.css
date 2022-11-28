@@ -167,10 +167,14 @@ html, body{
 
 .bgInput{
     background-color: rgb(219, 208, 44);
-    height: 50vh;
+    height: auto;
     width: 30vh;
     padding: 1em;
     border-radius: 0.5em;
+}
+
+.products{
+    object-fit: cover;
 }
 
 .profileContainer{

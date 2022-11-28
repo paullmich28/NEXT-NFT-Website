@@ -34,4 +34,5 @@ Route::middleware(['auth:web'])->group(function(){
     Route::put('/admin/profile/edit', [UserController::class, 'update'])->name('profile_edit');
     Route::get('/admin/profile/changepass', [UserController::class, 'changePass'])->name('password_change');
     Route::put('/admin/profile/changepass/process', [UserController::class, 'changePassProc'])->name('change_pw_process');
+    Route::post('/admin/catalog/add', [UserController::class, 'storeProduct'])->name('add_product');
 });

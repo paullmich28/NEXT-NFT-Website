@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Product;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 
@@ -51,7 +52,7 @@ class UserController extends Controller
                 return redirect()->route('homepage')->with('status', 'user');
             }
         }else{
-            return route('homepage');
+            return redirect()->back()->with('fail', "Your password doesn't match!");
         }
     }
 
@@ -128,6 +129,29 @@ class UserController extends Controller
         }
     }
 
+    public function adminCatalog(){
+        return view('admin.catalog');
+    }
+
+    public function storeProduct(Request $request)
+    {
+        $request->validate([
+            'productimg' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'productName' => 'required'
+        ],[
+            'productimg.required' => 'The product image is required'
+        ]);
+
+        $imgDir = $request->file('productimg')->getClientOriginalName();
+        $request->productimg->move(public_path('images/products'), $imgDir);
+        $product = new Product();
+        $product->img = $imgDir;
+        $product->name = $request->productName;
+        $product->save();
+
+        return redirect()->back()->with('status', 'The product has been added!');
+    }
+
     public function show($id)
     {
         
@@ -139,10 +163,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    
 
     /**
      * Display the specified resource.
