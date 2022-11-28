@@ -45,7 +45,7 @@ html, body{
 }
 
 .half-font{
-    color: rgb(102, 136, 113);
+    color: rgb(255, 193, 7);
 }
 
 .carousel-caption{
@@ -158,6 +158,32 @@ html, body{
     width: 150%;
 }
 
+.productWCaption{
+    text-decoration: none;
+}
+
+.productCaptionTemp{
+    opacity: 0;
+}
+
+.productCaption{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-top: 50%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.productWCaption:hover .productCaption{
+    opacity: 1;
+}
+
 .dropdown-item:hover{
     width: fit-content;
     border-radius: 0.4em;
@@ -173,8 +199,14 @@ html, body{
     border-radius: 0.5em;
 }
 
+.triggerBgPrd{
+    display: flex;
+}
+
 .products{
     object-fit: cover;
+    width: 275px;
+    height: 305px;
 }
 
 .profileContainer{
@@ -183,13 +215,23 @@ html, body{
     margin-right: auto;
 }
 
-@media (min-width: 576px) and (max-width: 992px){
+@media (min-width: 390px) and (max-width: 1024px){
     .scroll div{
         color: #000;
         font-size: 2em;
         white-space: nowrap;
         font-weight: 900;
         animation: animate2 20s linear infinite;
+    }
+
+    .triggerBgPrd{
+        display: block;
+    }
+
+    .products{
+        object-fit: cover;
+        width: 205px;
+        height: 235px;
     }
 
     .carousel-caption h5{

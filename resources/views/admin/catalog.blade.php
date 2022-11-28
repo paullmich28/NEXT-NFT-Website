@@ -15,7 +15,7 @@
                         <a class="nav-link" aria-current="page" href="{{route('admin_home')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{route('admin_catalog')}}">Catalog</a>
+                        <a class="nav-link active" href="{{route('admin_catalog')}}">Soul Market</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a href="https://www.instagram.com/">
@@ -50,7 +50,7 @@
     
     <div class="container">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class='bx bx-plus' >Add Product</i>
+            <i class='bx bx-plus' >Add Soul</i>
             
         </button>
         @if(Session::has('status'))
@@ -83,6 +83,11 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <h2 class="text-warning">Soul Market</h2>
+    </div>
+
     @livewire('products')   
     @livewireScripts 
 @include('extends.footer')

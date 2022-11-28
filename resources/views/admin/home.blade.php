@@ -14,7 +14,7 @@
                         <a class="nav-link active" aria-current="page" href="{{route('admin_home')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('admin_catalog')}}">Catalog</a>
+                        <a class="nav-link" href="{{route('admin_catalog')}}">Soul Market</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a href="https://www.instagram.com/">
@@ -44,4 +44,17 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        <h1>What do we mean by NEXT?</h1>
+        <p>
+            NEXT is a RPG Game Based NFT. We have characters that you can buy on the opensea website.
+            We call that characters "souls". You can buy soul by clicking the link right here, or if you're
+            curious about how do our souls look like, you can check the Soul Market first.
+        </p>
+        <hr style="color: yellow" />
+        <h1>About us?</h1>
+        <div class="d-flex">
+            <p>We are</p>
+        </div>
+    </div>
 @include('extends.footer')

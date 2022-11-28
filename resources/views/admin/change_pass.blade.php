@@ -14,7 +14,7 @@
                         <a class="nav-link" aria-current="page" href="{{route('admin_home')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('admin_catalog')}}">Catalog</a>
+                        <a class="nav-link" href="{{route('admin_catalog')}}">Soul Market</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a href="https://www.instagram.com/">
