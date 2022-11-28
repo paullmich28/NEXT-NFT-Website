@@ -29,7 +29,12 @@ class UserController extends Controller
     }
 
     public function adminHome(){
-        return view('admin.home');
+        if (Auth::guard('web')->user()->is_admin) {
+            return view('admin.home');
+        }else{
+            return Redirect::route('homepage');
+        }
+        
     }
 
     public function loginProcess(Request $request){
@@ -61,7 +66,7 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        /* $request->validate([
+        $request->validate([
             'name' => 'required',
             'username' => 'required',
             'email' => 'required|email|unique:users',
@@ -81,7 +86,7 @@ class UserController extends Controller
         
         $user->save();
 
-        return Redirect::route('login')->with('status', 'Sukses'); */
+        return Redirect::route('login')->with('status', 'Sukses');
     }
 
     public function logout(){
@@ -91,6 +96,41 @@ class UserController extends Controller
     
     public function catalogshow(){
         return view('catalog');
+    }
+
+    public function changePass(){
+        return view('admin.change_pass');
+    }
+
+    public function changePassProc(Request $request){
+        $request->validate([
+            'old_pass' => 'required',
+            'new_pass' => 'required|min:6|max:15',
+            'c_pass' => 'required|same:new_pass'
+        ],[
+            'old_pass.required' => 'The old password is required.',
+            'new_pass.required' => 'The new password is required.',
+            'c_pass.required' => 'The confirm password is required',
+            'c_pass.same' => 'The confirm password and new password must match.',
+        ]);
+
+        if(Hash::check($request->old_pass, Auth::guard('web')->user()->password)){
+            $id = Auth::guard('web')->user()->id;
+            $user = User::find($id);
+
+            $user->update([
+                'password' => Hash::make($request->new_pass)
+            ]);
+            
+            return back()->with('success','Your password has been updated!');
+        }else{
+            return back()->with('fail', "The old password doesn't match");
+        }
+    }
+
+    public function show($id)
+    {
+        
     }
 
     /**
@@ -110,10 +150,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -121,9 +158,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        if (Auth::guard('web')->user()->is_admin) {
+            return view('admin.profile');
+        }else{
+            return Redirect::route('homepage');
+        }
     }
 
     /**
@@ -133,9 +174,24 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'username' => 'required',
+            'email' => 'required|email'
+        ]);
+
+        $id = Auth::guard('web')->user()->id;
+        $user = User::find($id);
+
+        $user->update([
+            'name' => $request->nama,
+            'username' => $request->username,
+            'email' => $request->email
+        ]);
+         
+        return back()->with('success','Your profile has been updated!');
     }
 
     /**

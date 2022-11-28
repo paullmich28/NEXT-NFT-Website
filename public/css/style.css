@@ -10,21 +10,12 @@ html, body{
     background-color: black;
 }
 
-.trigger{
-    position: relative;
-}
-
 .overlay{
     color:#fff;
-    position:absolute;
     background-color: black;
     text-align: center;
     padding: 1em;
-    z-index:2;
-    width:50%;
-    top: 50%;
-    height: 15em;
-    transform: translate(50%,250%);
+    width: 35%;
 }
 
 .redirect{
@@ -131,7 +122,6 @@ html, body{
     width: 120%;
     position: absolute;
     display: flex;
-    background: yellowgreen;
     border: solid #8a7948;
 }
 
@@ -140,12 +130,14 @@ html, body{
     font-size: 2em;
     white-space: nowrap;
     font-weight: 900;
-    animation: animate1 10s linear infinite;
+    animation: animate1 20s linear infinite;
+    overflow: hidden;
 }
 
 
 .scroll.text{
     transform: rotate(2.5deg) translateY(-30px) translateX(-5px);
+    overflow: hidden;
 }
 
 .positioning1{
@@ -181,13 +173,19 @@ html, body{
     border-radius: 0.5em;
 }
 
+.profileContainer{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (min-width: 576px) and (max-width: 992px){
     .scroll div{
         color: #000;
         font-size: 2em;
         white-space: nowrap;
         font-weight: 900;
-        animation: animate2 10s linear infinite;
+        animation: animate2 20s linear infinite;
     }
 
     .carousel-caption h5{
@@ -215,35 +213,29 @@ html, body{
 
     .overlay{
         color:#fff;
-        position:absolute;
         background-color: black;
         text-align: center;
         padding: 1em;
-        z-index:2;
-        width:75%;
-        top: 50%;
-        height: 15em;
-        transform: translate(20%,250%);
     }
 
 }
 
 @keyframes animate1{
     0%{
-        transform: translateX(1010%);
+        transform: translateX(350%);
     }
 
     100%{
-        transform: translateX(-100%);
+        transform: translateX(-110%);
     }
 }
 
 @keyframes animate2{
     0%{
-        transform: translateX(440%);
+        transform: translateX(190%);
     }
 
     100%{
-        transform: translateX(-100%);
+        transform: translateX(-110%);
     }
 }

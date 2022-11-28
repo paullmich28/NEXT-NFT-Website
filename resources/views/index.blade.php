@@ -5,19 +5,9 @@
             <a class="navbar-brand fs-3 mx-auto mainJudul" href="#" id="main">
                 Ne<span class="half-font">xt</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
         </div>
     </nav>
 
-    <div class="container trigger">
-        <div class="overlay rounded">
-            <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
-            <a href="{{route('index')}}" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">Enter the world...</a>
-        </div>
-    </div>
-    
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -28,25 +18,48 @@
         <div class="carousel-inner">
             <div class="carousel-item active c-item" data-bs-interval="5000">
                 <img src="/images/assetBG1.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="overlay mx-auto rounded">
+                        <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
+                        <a href="{{route('index')}}" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">Enter the world...</a>
+                    </div>
+                </div>
             </div>
             <div class="carousel-item c-item" data-bs-interval="5000">
                 <img src="/images/assetBG2.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="overlay mx-auto rounded">
+                        <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
+                        <a href="{{route('index')}}" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">Enter the world...</a>
+                    </div>
+                </div>
             </div>
             <div class="carousel-item c-item" data-bs-interval="5000">
                 <img src="/images/assetBG3.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="overlay mx-auto rounded">
+                        <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
+                        <a href="{{route('index')}}" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">Enter the world...</a>
+                    </div>
+                </div>
             </div>
             <div class="carousel-item c-item">
                 <img src="/images/assetBG4.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="overlay mx-auto rounded">
+                        <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
+                        <a href="{{route('index')}}" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">Enter the world...</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="positioning1">
-        <div class="scroll text p-2">
+        <div class="scroll text p-2 bg-warning">
             <div>
-                Testing <span>Doang</span>
+                We're going to show you the NEXT big thing!
             </div>
         </div>
     </div>
-
 @include('extends.footer')

@@ -19,6 +19,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.cdnfonts.com/css/grim-reaper-2" rel="stylesheet">
 <!--===============================================================================================-->
 </head>
 <body>
