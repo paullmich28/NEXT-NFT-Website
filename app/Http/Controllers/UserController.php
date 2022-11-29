@@ -206,11 +206,10 @@ class UserController extends Controller
         $id = Auth::guard('web')->user()->id;
         $user = User::find($id);
 
-        $user->update([
-            'name' => $request->nama,
-            'username' => $request->username,
-            'email' => $request->email
-        ]);
+        $user->name = $request->name;
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->save();
          
         return back()->with('success','Your profile has been updated!');
     }

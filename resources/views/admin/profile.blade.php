@@ -52,7 +52,7 @@
         @endif
         <a href="{{route('admin_home')}}">Go Back</a>
         <h2 class="text-center">Profile Details</h2>
-        <form action="{{route('change_pw_process')}}" method="POST">
+        <form action="{{route('profile_edit')}}" method="POST">
             @method('PUT')
             @csrf
             <label for="nama" class="form-label fs-5">Name</label>
