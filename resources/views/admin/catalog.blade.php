@@ -33,11 +33,11 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="{{route('profile')}}">Profile Detail</a>
+                                <a class="dropdown-item" href="{{route('profile.edit')}}">Profile Detail</a>
                             </li>
                             <li>
-                                <a href="{{route('user_logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-item">Logout</a>
-                                <form action="{{route('user_logout')}}" id="logout-form" method="POST">
+                                <a href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-item">Logout</a>
+                                <form action="{{route('logout')}}" id="logout-form" method="POST">
                                     @csrf
                                 </form>
                             </li>

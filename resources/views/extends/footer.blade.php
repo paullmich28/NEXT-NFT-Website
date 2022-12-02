@@ -7,7 +7,11 @@
                         © 2022 NEXT Corp. All rights reserved.
                     </p>
                 </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3"></div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                @if(!Auth::check())
+                    <a href="{{route('login')}}">Admin</a>
+                @endif
+                </div>
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3"></div>
             </div>
         </div>
