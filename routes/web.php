@@ -26,7 +26,7 @@ Route::middleware(['guest:web'])->group(function(){
     Route::post('/register/process', [UserController::class, 'create'])->name('register_process');
 });
 
-Route::middleware(['auth:web'])->group(function(){
+Route::middleware(['auth', 'admin'])->group(function(){
     Route::post('/admin/logout', [UserController::class, 'logout'])->name('user_logout');
     Route::get('/admin/home', [UserController::class, 'adminHome'])->name('admin_home');
     Route::get('/admin/catalog', [UserController::class, 'adminCatalog'])->name('admin_catalog');

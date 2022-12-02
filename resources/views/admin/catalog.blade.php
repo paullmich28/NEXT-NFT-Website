@@ -54,7 +54,7 @@
             
         </button>
         @if(Session::has('status'))
-            <div class="alert alert-success w-25">{{Session::get('status')}}</div>
+            <div class="alert alert-success w-25 mt-2">{{Session::get('status')}}</div>
         @endif
     </div>
     
@@ -84,7 +84,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container mt-2">
         <h2 class="text-warning">Soul Market</h2>
     </div>
 
