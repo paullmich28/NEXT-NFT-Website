@@ -14,8 +14,9 @@
                         <a class="nav-link active" aria-current="page" href="{{route('admin_home')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('admin_catalog')}}">Soul Market</a>
+                        <a class="nav-link" href="{{route('admin_catalog')}}">NEXT-NFT STORE</a>
                     </li>
+                    
                     <li class="nav-item mx-2">
                         <a href="https://www.instagram.com/">
                             <img src="/images/ig.jpg" alt="instagram" width="45" height="45" class="rounded-circle border border-2 border-white">
