@@ -21,7 +21,7 @@ Route::middleware(['guest:web'])->group(function(){
     Route::get('/catalog', [UserController::class, 'catalogshow'])->name('catalog');
 });
 
-Route::middleware(['auth', 'admin'])->group(function(){
+Route::middleware(['admin'])->group(function(){
     Route::get('/admin/home', [UserController::class, 'adminHome'])->name('admin_home');
     Route::get('/admin/catalog', [UserController::class, 'adminCatalog'])->name('admin_catalog');
     Route::post('/admin/catalog/add', [UserController::class, 'storeProduct'])->name('add_product');

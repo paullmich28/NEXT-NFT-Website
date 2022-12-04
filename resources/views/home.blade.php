@@ -1,6 +1,6 @@
 @include('extends.header')
 <body id="bodyHome">
-    <nav class="navbar navbar-expand-lg navbar-dark static-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container pb-2 pt-2">
             <a class="navbar-brand fs-4" href="{{route('homepage')}}" id="main">
                 Ne<span class="half-font">xt</span>

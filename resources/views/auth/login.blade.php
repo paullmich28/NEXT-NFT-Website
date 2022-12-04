@@ -1,5 +1,8 @@
 <x-guest-layout>
     <x-auth-card>
+        <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('index') }}">
+            {{ __('Go Back') }}
+        </a>
         <x-slot name="logo">
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -9,7 +12,7 @@
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login') }}" class="mt-2">
             @csrf
 
             <!-- Email Address -->
@@ -45,7 +48,9 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mx-2" href="{{ route('register') }}">
+                    {{ __('Register') }}
+                </a>
                 <x-primary-button class="ml-3">
                     {{ __('Log in') }}
                 </x-primary-button>
