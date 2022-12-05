@@ -14,3 +14,4 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
+<body id="bodyHome">

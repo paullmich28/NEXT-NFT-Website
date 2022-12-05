@@ -3,13 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 use App\Models\Product;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Redirect;
 
-class UserController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,11 +14,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view('admin.home');
     }
 
-    public function homepageRedirect(){
-        return view('home');
+    public function adminCatalog(){
+        return view('admin.catalog');
     }
 
     /**
@@ -30,23 +26,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-
-    }
-    
-    public function catalogshow(){
-        return view('catalog');
-    }
-
-    public function collab(){
-        return view('collab');
-    }
-
-
-    public function show($id)
-    {
-        
+        //
     }
 
     /**
@@ -55,7 +37,24 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    
+    public function store(Request $request)
+    {
+        $request->validate([
+            'productimg' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'productName' => 'required'
+        ],[
+            'productimg.required' => 'The product image is required'
+        ]);
+
+        $imgDir = $request->file('productimg')->getClientOriginalName();
+        $request->productimg->move(public_path('images/products'), $imgDir);
+        $product = new Product();
+        $product->img = $imgDir;
+        $product->name = $request->productName;
+        $product->save();
+
+        return redirect()->back()->with('status', 'The product has been added!');
+    }
 
     /**
      * Display the specified resource.
@@ -63,7 +62,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    
+    public function show($id)
+    {
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -71,9 +73,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-
+        //
     }
 
     /**
@@ -83,9 +85,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**
