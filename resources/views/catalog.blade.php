@@ -40,7 +40,7 @@
     </div>
 </nav>
 <div class="container">
-    <h2 class="text-warning">Soul Market</h2>
+    <h2 class="text-warning">NEXT-NFT STORE</h2>
 </div>
 
 @livewire('products')   

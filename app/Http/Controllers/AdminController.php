@@ -56,6 +56,12 @@ class AdminController extends Controller
         return redirect()->back()->with('status', 'The product has been added!');
     }
 
+    public function deleteProduct($id){
+        $product = Product::findOrFail($id);
+        $product->delete();
+        return redirect()->back()->with('status', 'Product berhasil di-delete!');
+    }
+
     /**
      * Display the specified resource.
      *

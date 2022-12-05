@@ -196,14 +196,38 @@ html, body{
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.productCaptionAdmin{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-top: 50%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
     height: 90%;
     width: 100%;
     opacity: 0;
     transition: 0.5s ease;
 }
 
-.navbar .dropdown-menu.show {
+.productCaptionAdmin:hover{
+    opacity: 1;
+}
+
+.navbar .about.show {
     min-width: 250%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .productWCaption:hover .productCaption{

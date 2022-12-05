@@ -20,7 +20,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu about">
                         <li><a class="dropdown-item" href="#">FAQ</a></li>
                         <li><a href="{{route('collab')}}" class="dropdown-item">Be a Collaborator</a></li>
                     </ul>
@@ -58,7 +58,7 @@
 
 <div class="container">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <i class='bx bx-plus' >Add Soul</i>
+        <i class='bx bx-plus' >Add Product</i>
         
     </button>
     @if(Session::has('status'))
@@ -93,9 +93,9 @@
 </div>
 
 <div class="container mt-2">
-    <h2 class="text-warning">Soul Market</h2>
+    <h2 class="text-warning">NEXT-NFT STORE</h2>
 </div>
 
-@livewire('products')   
+@livewire('products-admin')   
 @livewireScripts 
 @include('extends.footer')

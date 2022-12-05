@@ -22,7 +22,7 @@ class AdminMiddleware
             if(Auth::user()->is_admin){
                 return $next($request);
             }else{
-                return Redirect::route('homepage');
+                return route('homepage');
             }
         }else{
             return Redirect::route('login');
