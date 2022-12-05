@@ -25,6 +25,10 @@ class UserController extends Controller
         return view('home');
     }
 
+    public function faq(){
+        return view('faq');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

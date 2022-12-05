@@ -12,7 +12,10 @@
                     <a href="{{route('login')}}" class="text-decoration-none text-white admin">Admin</a>
                 @endif
                 </div>
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3"></div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <i class='bx bxs-envelope fs-4 align-text-bottom'></i>
+                    <span>NEXTNFT1c@gmail.com</span> 
+                </div>
             </div>
         </div>
     </footer>

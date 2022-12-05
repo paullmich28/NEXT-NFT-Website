@@ -1,8 +1,7 @@
 @include('extends.header')
-@livewireStyles
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container pb-2 pt-2">
-        <a class="navbar-brand fs-4" href="{{route('admin_home')}}" id="main">
+        <a class="navbar-brand fs-4" href="{{route('homepage')}}" id="main">
             Ne<span class="half-font">xt</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,14 +13,14 @@
                     <a class="nav-link" aria-current="page" href="{{route('admin_home')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{route('admin_catalog')}}">NEXT-NFT STORE</a>
+                    <a class="nav-link" href="{{route('admin_catalog')}}">NEXT-NFT STORE</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About
                     </a>
                     <ul class="dropdown-menu about">
-                        <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        <li><a class="dropdown-item" href="{{route('faq_admin')}}">FAQ</a></li>
                         <li><a href="{{route('collab_admin')}}" class="dropdown-item">Be a Collaborator</a></li>
                     </ul>
                 </li>
@@ -55,47 +54,46 @@
         </div>
     </div>
 </nav>
-
-<div class="container">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <i class='bx bx-plus' >Add Product</i>
-        
-    </button>
-    @if(Session::has('status'))
-        <div class="alert alert-success w-25 mt-2">{{Session::get('status')}}</div>
-    @endif
-</div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form action="{{route('add_product')}}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <div class="modal-body">
-                    <label for="productimg" class="form-label">Upload Photo</label>
-                    <input type="file" name="productimg" class="form-control"/>
-                    <span class="text-danger fs-5">@error('productimg') {{$message}} @enderror</span><br />
-                    <label for="productName" class="form-label mt-3">Product Name</label>
-                    <input type="text" name="productName" class="form-control"/>
-                    <span class="text-danger fs-5">@error('productName') {{$message}} @enderror</span><br />
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                </div>
-            </form>
+<section>
+    <div class="container-faq text-warning">
+        <h1>Frequently Asked Question</h1>
+        <div class="mt-5">
+            <details>
+                <summary>How do I purchase NFT?</summary>
+                <p>Our NFT (Non-Fungible Token) are connected to opensea. You can make an account by connecting your crypto wallet.</p> 
+            </details>
+            <details>
+                <summary>What is a crypto wallet?</summary>
+                <p>
+                    Crypto wallet is a digital wallet that helps you buy,sell, and store your cryptocurreny and NFTs. Next time you try to make your own, 
+                    you will get your own masterkey. It is different from other account because the one that can recover your account is you by using your masterkey. 
+                    Because of that you must lock, keep and safe your masterkey either on your private notes, deposit box or anything that you to keep it safe.
+                </p>
+            </details>
+            <details>
+                <summary>How to be a collaborator?</summary>
+                <p>
+                    Collaborator is our system that inviting artist all over the world to join our team to develop your art to be an digital asset for your own. <br>
+                    1.	Send your proposal
+                    <ul>
+                        Propose your own concept and art to our email. There are some requirements that artist must be done.
+                        <li>Your NFTs are unique and authentic</li>
+                        <li>Minimun 5 example of your own art that require</li>
+                        <li>Fill your own identity (Name,Region,Age,etc.)</li>
+                        <li>Add your phone number and email</li>
+                        For further Information, check Be A Collaborator in the navigation bar.
+                    </ul>
+                </p>
+                <p>
+                    2.	Meet our team
+                    
+                    <ul>
+                        After that, our team will contact you by email or other social media. Furthermore, we will meet to make our agreement with you 
+                    and finally you will able to join our team.
+                    </ul>
+                </p>
+            </details>
         </div>
     </div>
-</div>
-
-<div class="container mt-2">
-    <h2 class="text-warning">NEXT-NFT STORE</h2>
-</div>
-
-@livewire('products-admin')   
-@livewireScripts 
+</section>
 @include('extends.footer')

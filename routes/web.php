@@ -21,6 +21,7 @@ Route::middleware(['guest:web'])->group(function(){
     Route::get('/home', [UserController::class, 'homepageRedirect'])->name('index');
     Route::get('/catalog', [UserController::class, 'catalogshow'])->name('catalog');
     Route::get('/collab', [UserController::class, 'collab'])->name('collab');
+    Route::get('/faq', [UserController::class, 'faq'])->name('faq');
 });
 
 Route::middleware(['auth'])->group(function(){
@@ -29,6 +30,7 @@ Route::middleware(['auth'])->group(function(){
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/admin/collab', [AdminController::class, 'collab'])->name('collab_admin');
+    Route::get('/admin/faq', [AdminController::class, 'faq'])->name('faq_admin');
 });
 
 Route::middleware(['admin'])->group(function(){

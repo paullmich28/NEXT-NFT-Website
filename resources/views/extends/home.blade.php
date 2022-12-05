@@ -8,7 +8,10 @@
             <div class="mb-4 row">
                 <div class="mb-4 col-lg-7 col-12">
                     <h1 class="d-flex font-italic mb-3 text-white">WELCOME TO NEXT</h1>
-                    <p class="text-white mb-0">Kamu baru saja masuk kedalam dunia seni digital. NEXT merupakan sebuah platform perkumpulan Karya Seni digital yang unik dan bisa kamu koleksi. Masuk ke Soul Market untuk melihat karya-karya yang ada di dunia NEXT. NEXT merupakan koleksi project NFT berisi lebih dari 50+ unique art collection yang berada pada opensea market.</p>
+                    <p class="text-white mb-0">
+                        You just entered the digital world of art. NEXT is a digital art platform which contains unique arts that you can buy and collect. 
+                        For further information about our collections, check the market page in the navigation bar, or check our opensea by clicking the button below.
+                    </p>
                 </div>
                 <div class="my-lg-auto col-lg-4 col-12 offset-lg-1">
                     <div class="common-container">
@@ -29,9 +32,9 @@
 </div>
 <div class="p-4 m-auto bg-warning rounded w-50">
     <h3>BUY NEXT</h3>
-    <p>Lihat koleksi NEXT pada link opensea dibawah ini.</p>
+    <p>See our collections here.</p>
     <div class="m-auto col-lg-3 col-12 offset-lg-1">
-        <a href="https://opensea.io/collection/boredapeyachtclub">
+        <a href="https://opensea.io/NEXT_ARTC">
             <button class="btn btn-dark" type="button">BUY NEXT ON OPENSEA</button>
         </a>
     </div>
@@ -55,11 +58,13 @@
                     </div>
                     <div class="mb-3 col-lg-7 col-12">
                         <h2 class="text-white mb-3">SPECIFICATION</h2>
-                        <p class="text-white">Setiap karya yang ada pada NEXT memiliki keunikan masing-masing. NEXT yang diupload merupakan karakter-karakter original dalam bentuk 2.5D yang memiliki tingkat (rare) yang berbeda.<br>
-                        <br>NEXT diupload dengan kualitas HD.<br>
-                        <br>NEXT dapat dibeli di (mana) dengan harga yang berbeda-beda sesuai dengan character yang akan dibeli.</p>
+                        <p class="text-white">
+                            Each product in NEXT has their own characteristic. NEXT NFTs are different characters/items
+                            that have different rarities.<br>
+                        <br>NEXT is a HD Quality image.<br>
+                        <br>You can buy NEXT with different prices based on the character that you buy.
+                        </p>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -75,7 +80,7 @@
                                 <div class="mb-3 col-lg-7 col-12">
                                     <h2 class="text-white mb-3">THE TEAM</h2>
                                     <p class="text-white">
-                                        NEXT dibuat oleh tim yang berisikan 6 orang dimana terdiri dari 1 project manager, 4 programmer, dan 1 artist.
+                                        NEXT was created by the team of 6 people. 1 project manager, 4 programmers, and 1 artist.
                                     </p>
                                     <p class="text-white">
                                         JONATHAN HARIWINARTA,
@@ -83,7 +88,7 @@
                                     </p>
                                     <p class="text-white">
                                         LIUSIANTO,
-                                        <span>Second Programmer</span> 
+                                        <span>Co-Programmer</span> 
                                     </p>
                                     <p class="text-white">
                                         JONATHAN DHARMA SETIAWAN,
@@ -91,15 +96,14 @@
                                     </p>
                                     <p class="text-white">
                                         PAULUS MICHAEL LEANG,
-                                        <span>Programmer Handal Paling Tamvan</span>
+                                        <span>The Most Handsome Programmer (In other words, lead programmer)</span>
                                     </p>
                                     <p class="text-white">
                                         JAMES BERNARD WILLIAM,
                                         <span>Basketmball</span>
                                     </p>
                                     <p class="text-white">
-                                        ARTIST,
-                                        <span>Komisi per NFT</span>
+                                        ARTIST
                                     </p>
                                 </div>
                             </div>

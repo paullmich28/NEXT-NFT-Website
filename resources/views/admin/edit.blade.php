@@ -25,12 +25,12 @@
                     </ul>
                 </li>
                 <li class="nav-item mx-2">
-                    <a href="https://www.instagram.com/">
+                    <a href="https://www.instagram.com/next_artc/">
                         <img src="/images/ig.jpg" alt="instagram" width="45" height="45" class="rounded-circle border border-2 border-white">
                     </a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a href="https://opensea.io/">
+                    <a href="https://opensea.io/NEXT_ARTC">
                         <img src="/images/opensea.png" alt="opensea" width="45" height="45" class="rounded-circle border border-2 border-white">
                     </a>
                 </li>

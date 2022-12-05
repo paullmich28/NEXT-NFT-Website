@@ -19,7 +19,7 @@
             <img src="/images/assetBG1.jpg" class="d-block w-100 c-img" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <div class="overlay mx-auto rounded">
-                    <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
+                    <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Let's see...</h3>
                     <a href="{{route('index')}}" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">Enter the world...</a>
                 </div>
             </div>
@@ -28,7 +28,7 @@
             <img src="/images/assetBG2.jpg" class="d-block w-100 c-img" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <div class="overlay mx-auto rounded">
-                    <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
+                    <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Let's see...</h3>
                     <a href="{{route('index')}}" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">Enter the world...</a>
                 </div>
             </div>
@@ -37,7 +37,7 @@
             <img src="/images/assetBG3.jpg" class="d-block w-100 c-img" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <div class="overlay mx-auto rounded">
-                    <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
+                    <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Let's see...</h3>
                     <a href="{{route('index')}}" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">Enter the world...</a>
                 </div>
             </div>
@@ -46,7 +46,7 @@
             <img src="/images/assetBG4.jpg" class="d-block w-100 c-img" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <div class="overlay mx-auto rounded">
-                    <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum dolor sit amet</h3>
+                    <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Let's see...</h3>
                     <a href="{{route('index')}}" class="redirect btn btn-warning mt-4" data-aos="fade-down" data-aos-duration="1000">Enter the world...</a>
                 </div>
             </div>

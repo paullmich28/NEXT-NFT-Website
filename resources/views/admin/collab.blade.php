@@ -25,14 +25,30 @@
                     </ul>
                 </li>
                 <li class="nav-item mx-2">
-                    <a href="https://www.instagram.com/">
+                    <a href="https://www.instagram.com/next_artc/">
                         <img src="/images/ig.jpg" alt="instagram" width="45" height="45" class="rounded-circle border border-2 border-white">
                     </a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a href="https://opensea.io/">
+                    <a href="https://opensea.io/NEXT_ARTC">
                         <img src="/images/opensea.png" alt="opensea" width="45" height="45" class="rounded-circle border border-2 border-white">
                     </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{Auth::guard('web')->user()->name}}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="{{route('profile.edit')}}">Profile Detail</a>
+                        </li>
+                        <li>
+                            <a href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-item">Logout</a>
+                            <form action="{{route('logout')}}" id="logout-form" method="POST">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>

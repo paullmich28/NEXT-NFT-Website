@@ -274,6 +274,17 @@ input::-webkit-inner-spin-button {
     height: auto;
 }
 
+.container-faq{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+details[open] summary ~ * {
+    animation: open 0.3s ease-in-out;
+}
+
 @media (min-width: 370px) and (max-width: 820px){
     .scroll div{
         color: #000;
@@ -418,4 +429,51 @@ input::-webkit-inner-spin-button {
     100%{
         transform: translateX(-110%);
     }
+}
+
+@keyframes open{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+details summary::-webkit-details-marker{
+    display: none;
+}
+
+details summary{
+    width: 100%;
+    padding: 0.5rem 0;
+    border-top: 1px solid yellow;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 300;
+    list-style: none;
+}
+
+details summary:after{
+    content: "+";
+    color: yellow;
+    position: absolute;
+    font-size: 1.75rem;
+    line-height: 0;
+    margin-top: 0.75rem;
+    right: 0;
+    font-weight: 200;
+    transform-origin: center;
+    transition: 200ms linear;
+}
+
+details[open] summary:after{
+    transform: rotate(45deg);
+    font-size: 2rem;
+}
+
+details summary{
+    outline: 0;
 }

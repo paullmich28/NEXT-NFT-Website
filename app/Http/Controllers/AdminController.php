@@ -73,6 +73,10 @@ class AdminController extends Controller
         return view('admin.collab');
     }
 
+    public function faq(){
+        return view('admin.faq');
+    }
+
     /**
      * Display the specified resource.
      *
