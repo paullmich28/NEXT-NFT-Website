@@ -22,7 +22,7 @@
                     </a>
                     <ul class="dropdown-menu about">
                         <li><a class="dropdown-item" href="#">FAQ</a></li>
-                        <li><a href="{{route('collab')}}" class="dropdown-item">Be a Collaborator</a></li>
+                        <li><a href="{{route('collab_admin')}}" class="dropdown-item">Be a Collaborator</a></li>
                     </ul>
                 </li>
                 <li class="nav-item mx-2">

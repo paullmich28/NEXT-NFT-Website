@@ -52,5 +52,20 @@
         </div>
     </div>
 </nav>
-@include('extends.home')
+<div class="container">
+    <form action="/admin/catalog/edit/{{$product->id}}" enctype="multipart/form-data" method="POST">
+        @method('patch')
+        @csrf
+        <div class="editData mx-auto mt-4 bg-warning p-4 rounded">
+            <a href="{{route('admin_catalog')}}" class="text-decoration-none m-2">Go Back</a>
+            <img src="/images/products/{{$product->img}}" class="imgEdit"/>
+            <label for="img" class="form-label mt-2">Product's Image</label>
+            <input type="file" name="img" class="form-control">
+            <label for="name" class="form-label mt-2">Product Name</label>
+            <input type="text" name="name" value="{{$product->name}}" class="form-control "> 
+            <button type="submit" class="btn btn-success mt-5">Save Changes</button>
+            <a href="/admin/catalog/delete/{{$product->id}}" class="btn btn-danger mx-1 mt-5">Delete</a>
+        </div>
+    </form>
+</div>
 @include('extends.footer')

@@ -265,6 +265,15 @@ input::-webkit-inner-spin-button {
     margin-right: auto;
 }
 
+.editData{
+    width: 50%;
+}
+
+.imgEdit{
+    max-width: 100%; 
+    height: auto;
+}
+
 @media (min-width: 370px) and (max-width: 820px){
     .scroll div{
         color: #000;
@@ -322,6 +331,9 @@ input::-webkit-inner-spin-button {
         padding: 1em;
     }
 
+    .editData{
+        width: 75%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
@@ -331,6 +343,11 @@ input::-webkit-inner-spin-button {
         white-space: nowrap;
         font-weight: 900;
         animation: animate2 20s linear infinite;
+    }
+
+    .imgEdit{
+        width: 400px; 
+        height: auto;
     }
 
     .scroll2 div{

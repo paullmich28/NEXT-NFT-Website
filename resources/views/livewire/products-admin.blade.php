@@ -13,14 +13,7 @@
                     <p class="text-white fs-4 productCaptionTemp"></p> 
                     <p class="text-white fs-4 productCaptionAdmin">{{$product->name}}#{{$product->id}}</p> 
                 </a>
-                <form action="/admin/catalog/delete/{{$product->id}}" method="POST" id="delete-product" style="opacity: 0">
-                    @method('delete')
-                    @csrf
-                </form>
-                <a href="/admin/catalog/delete/{{$product->id}}" class="btn btn-danger mx-1" onclick="event.preventDefault();document.getElementById('delete-product').submit();">
-                    <i class='bx bxs-trash'></i>
-                </a>
-                <a href="#" class="btn btn-light">
+                <a href="/admin/catalog/{{$product->id}}" class="btn btn-light">
                     <i class='bx bxs-edit' ></i>
                 </a>
             </div>

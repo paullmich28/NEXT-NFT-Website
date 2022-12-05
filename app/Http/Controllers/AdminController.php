@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
@@ -58,8 +59,18 @@ class AdminController extends Controller
 
     public function deleteProduct($id){
         $product = Product::findOrFail($id);
-        $product->delete();
-        return redirect()->back()->with('status', 'Product berhasil di-delete!');
+
+        if(File::exists(public_path('/images/products/'.$product->img))){
+            File::delete(public_path('/images/products/'.$product->img));
+        }
+
+        $productDel = Product::where('id', $product->id)->delete();
+
+        return redirect('/admin/catalog')->with('status', 'Product berhasil di-delete!');
+    }
+
+    public function collab(){
+        return view('admin.collab');
     }
 
     /**
@@ -81,7 +92,9 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::findOrFail($id);
+
+        return view('admin.edit', ['product' => $product]);
     }
 
     /**
@@ -93,7 +106,25 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+        $product = Product::findOrFail($id);
+
+        if($request->hasFile('img')){
+            File::delete(public_path('/images/products/'.$product->img));
+            $imgDir = $request->file('img')->getClientOriginalName();
+            $request->img->move(public_path('images/products'), $imgDir);
+            $product->name = $request->name;
+            $product->img = $imgDir;
+            $product->save();
+            return redirect()->back()->with('status', 'The product has been updated!');
+        }else{
+            $product->name = $request->name;
+            $product->save();
+            return redirect()->back()->with('status', 'The product has been updated!');
+        }
     }
 
     /**

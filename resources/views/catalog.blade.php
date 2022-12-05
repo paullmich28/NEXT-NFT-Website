@@ -20,7 +20,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu about">
                         <li><a class="dropdown-item" href="#">FAQ</a></li>
                         <li><a href="{{route('collab')}}" class="dropdown-item">Be a Collaborator</a></li>
                     </ul>
