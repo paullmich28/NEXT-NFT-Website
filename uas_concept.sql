@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 08:09 AM
+-- Generation Time: Dec 06, 2022 at 03:32 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -54,11 +54,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(5, '2014_10_12_000000_create_users_table', 1),
-(6, '2014_10_12_100000_create_password_resets_table', 1),
-(7, '2019_08_19_000000_create_failed_jobs_table', 1),
-(8, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(11, '2022_11_27_070352_create_products_table', 2);
+(17, '2014_10_12_000000_create_users_table', 1),
+(18, '2014_10_12_100000_create_password_resets_table', 1),
+(19, '2019_08_19_000000_create_failed_jobs_table', 1),
+(20, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(21, '2022_11_27_070352_create_products_table', 1);
 
 -- --------------------------------------------------------
 
@@ -110,12 +110,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
-(1, 'Spiderman', 'Web_of_Spider-Man_Vol_1_129-1.png', '2022-11-27 23:31:32', '2022-11-27 23:31:32'),
-(2, 'Doctor Strange', 'Stephen_Strange_(Earth-199999)_from_Doctor_Strange_(film)_002.jpg', '2022-11-27 23:35:05', '2022-11-27 23:35:05'),
-(3, 'Superman', '202110181428-main.cropped_1634542148.jpg', '2022-11-27 23:38:09', '2022-11-27 23:38:09'),
-(4, 'Batman', 'Batman_-_Justice_League_-_promo.jpg', '2022-11-27 23:44:49', '2022-11-27 23:44:49'),
-(5, 'Shaggy', 'l-intro-1637688577.jpg', '2022-11-27 23:48:47', '2022-11-27 23:48:47'),
-(6, 'Kira Yoshikage', 'Scarykira.png', '2022-11-27 23:51:36', '2022-11-27 23:51:36');
+(1, 'Product1', 'assetBG1.jpg', '2022-12-05 03:18:28', '2022-12-05 03:18:28'),
+(2, 'Product2', 'assetBG2.jpg', '2022-12-05 03:18:34', '2022-12-05 03:18:34'),
+(3, 'Product3', 'assetBG3.jpg', '2022-12-05 03:18:41', '2022-12-05 03:18:41'),
+(4, 'Product4', 'assetBG4.jpg', '2022-12-05 03:18:50', '2022-12-05 03:18:50');
 
 -- --------------------------------------------------------
 
@@ -126,7 +124,6 @@ INSERT INTO `products` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -140,8 +137,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `password`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(6, 'Paulus', 'paullmich28', 'paullmich28@gmail.com', NULL, '$2y$10$aOw2aqRIdSkewnug1Yyu1OhkvrjKA31o4ad8R3M6dFFZlC8UW1cn2', 1, NULL, '2022-11-23 03:04:28', '2022-11-27 21:51:13');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Paulus Michael', 'paullmich28@gmail.com', NULL, '$2y$10$ElXE/lySTBgT7D1kfq0LY.WiArr.F2PD/lNZUIzpDkcLjpdk6R66m', 1, NULL, '2022-12-05 01:59:02', '2022-12-05 01:59:02');
 
 --
 -- Indexes for dumped tables
@@ -201,7 +198,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -213,13 +210,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
