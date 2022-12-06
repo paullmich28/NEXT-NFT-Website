@@ -21,7 +21,7 @@
                         About
                     </a>
                     <ul class="dropdown-menu about">
-                        <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        <li><a class="dropdown-item" href="{{route('faq_admin')}}">FAQ</a></li>
                         <li><a href="{{route('collab_admin')}}" class="dropdown-item">Be a Collaborator</a></li>
                     </ul>
                 </li>
@@ -57,9 +57,8 @@
 </nav>
 
 <div class="container">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <i class='bx bx-plus' >Add Product</i>
-        
     </button>
     @if(Session::has('status'))
         <div class="alert alert-success w-25 mt-2">{{Session::get('status')}}</div>
@@ -82,6 +81,9 @@
                     <label for="productName" class="form-label mt-3">Product Name</label>
                     <input type="text" name="productName" class="form-control"/>
                     <span class="text-danger fs-5">@error('productName') {{$message}} @enderror</span><br />
+                    <label for="link">Opensea Link</label>
+                    <input type="text" name="link" class="form-control">
+                    <span class="text-danger fs-5">@error('link') {{$message}} @enderror</span><br />
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

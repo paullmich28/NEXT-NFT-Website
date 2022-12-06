@@ -100,7 +100,7 @@
                                     </p>
                                     <p class="text-white">
                                         JAMES BERNARD WILLIAM,
-                                        <span>Basketmball</span>
+                                        <span>The Spokesman</span>
                                     </p>
                                     <p class="text-white">
                                         ARTIST

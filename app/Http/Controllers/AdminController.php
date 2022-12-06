@@ -42,7 +42,8 @@ class AdminController extends Controller
     {
         $request->validate([
             'productimg' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-            'productName' => 'required'
+            'productName' => 'required',
+            'link' => 'required'
         ],[
             'productimg.required' => 'The product image is required'
         ]);
@@ -52,6 +53,7 @@ class AdminController extends Controller
         $product = new Product();
         $product->img = $imgDir;
         $product->name = $request->productName;
+        $product->link = $request->link;
         $product->save();
 
         return redirect()->back()->with('status', 'The product has been added!');
@@ -111,7 +113,9 @@ class AdminController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required'
+            'img' => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'name' => 'required',
+            'link' => 'required'
         ]);
 
         $product = Product::findOrFail($id);
@@ -122,10 +126,12 @@ class AdminController extends Controller
             $request->img->move(public_path('images/products'), $imgDir);
             $product->name = $request->name;
             $product->img = $imgDir;
+            $product->link = $request->link;
             $product->save();
             return redirect()->back()->with('status', 'The product has been updated!');
         }else{
             $product->name = $request->name;
+            $product->link = $request->link;
             $product->save();
             return redirect()->back()->with('status', 'The product has been updated!');
         }

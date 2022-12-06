@@ -1,7 +1,7 @@
 @include('extends.header')
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container pb-2 pt-2">
-        <a class="navbar-brand fs-4" href="{{route('homepage')}}" id="main">
+        <a class="navbar-brand fs-4" href="{{route('admin_home')}}" id="main">
             Ne<span class="half-font">xt</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
                         About
                     </a>
                     <ul class="dropdown-menu about">
-                        <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        <li><a class="dropdown-item" href="{{route('faq_admin')}}">FAQ</a></li>
                         <li><a href="{{route('collab_admin')}}" class="dropdown-item">Be a Collaborator</a></li>
                     </ul>
                 </li>

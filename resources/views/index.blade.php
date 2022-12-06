@@ -1,7 +1,7 @@
 @include('extends.header')
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container pb-2 pt-2">
-        <a class="navbar-brand fs-3 mx-auto mainJudul" href="{{route('homepage')}}" id="main">
+        <a class="navbar-brand fs-3 mx-auto mainJudul" href="{{route('index')}}" id="main">
             Ne<span class="half-font">xt</span>
         </a>
     </div>
@@ -16,7 +16,7 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active c-item" data-bs-interval="5000">
-            <img src="/images/assetBG1.jpg" class="d-block w-100 c-img" alt="...">
+            <img src="/images/assetBG1.jpg" class="d-block c-img" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <div class="overlay mx-auto rounded">
                     <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Let's see...</h3>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="carousel-item c-item" data-bs-interval="5000">
-            <img src="/images/assetBG2.jpg" class="d-block w-100 c-img" alt="...">
+            <img src="/images/assetBG2.jpg" class="d-block c-img" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <div class="overlay mx-auto rounded">
                     <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Let's see...</h3>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="carousel-item c-item" data-bs-interval="5000">
-            <img src="/images/assetBG3.jpg" class="d-block w-100 c-img" alt="...">
+            <img src="/images/assetBG3.jpg" class="d-block c-img" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <div class="overlay mx-auto rounded">
                     <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Let's see...</h3>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="carousel-item c-item">
-            <img src="/images/assetBG4.jpg" class="d-block w-100 c-img" alt="...">
+            <img src="/images/assetBG4.jpg" class="d-block c-img" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <div class="overlay mx-auto rounded">
                     <h3 class="desc" data-aos="fade-up" data-aos-duration="1000">Let's see...</h3>

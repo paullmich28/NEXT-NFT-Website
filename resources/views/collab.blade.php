@@ -1,7 +1,7 @@
 @include('extends.header')
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container pb-2 pt-2">
-        <a class="navbar-brand fs-4" href="{{route('homepage')}}" id="main">
+        <a class="navbar-brand fs-4" href="{{route('index')}}" id="main">
             Ne<span class="half-font">xt</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,9 +41,9 @@
 <div class="container">
     <h1 class="text-white">How to become a collaborator?</h1>
     <p class="text-white">Apakah anda ingin menjadi seorang kolaborator NEXT untuk mendapat kesempatan listing NFT anda di website ini?</p>
-    <p class="text-white">Jika iya maka kirimkanlah sebuah email yang ditujukan kepada <span class="fw-bold">next.nft@gmail.com</span> dengan format email:</p>
-    <p class="col-4 m-5 text-white">
-        “Halo, selamat siang nama saya (nama/alias), saya ingin menjadi seorang kolaborator dengan anda agar nft saya bisa di masukkan kedalam catalog, 
+    <p class="text-white">Jika iya maka kirimkanlah sebuah email yang ditujukan kepada <span class="fw-bold">next.nft@gmail.com</span> dengan format email sebagai berikut:</p>
+    <p class="col-4 m-5 p-5 rounded bg-warning">
+        “Halo, selamat siang/sore/malam, nama saya (nama/alias), saya ingin menjadi seorang kolaborator dengan anda agar nft saya bisa di masukkan kedalam catalog, 
         ini adalah 4 sample nft saya yang bertema (nama tema), jika anda tertarik dalam menjadikan saya seorang kolaborator maka tolong hubungi saya melalui 
         (kontak yg bisa dihubungi (WhatsApp, LINE, Email))”
     </p>
