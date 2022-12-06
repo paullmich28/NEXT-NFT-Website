@@ -1,7 +1,7 @@
 @include('extends.header')
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container pb-2 pt-2">
-        <a class="navbar-brand fs-3 mx-auto mainJudul" href="#" id="main">
+        <a class="navbar-brand fs-3 mx-auto mainJudul" href="{{route('homepage')}}" id="main">
             Ne<span class="half-font">xt</span>
         </a>
     </div>

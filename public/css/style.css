@@ -339,11 +339,20 @@ details[open] summary ~ * {
         color:#fff;
         background-color: black;
         text-align: center;
-        padding: 1em;
+        width: fit-content;
+    }
+
+    .desc{
+        font-size: 16px;
     }
 
     .editData{
         width: 75%;
+    }
+
+    .redirect{
+        width: fit-content;
+        font-size: 16px;
     }
 }
 
