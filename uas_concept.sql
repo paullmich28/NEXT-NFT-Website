@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2022 at 03:32 AM
+-- Generation Time: Dec 06, 2022 at 02:03 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -54,11 +54,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(17, '2014_10_12_000000_create_users_table', 1),
-(18, '2014_10_12_100000_create_password_resets_table', 1),
-(19, '2019_08_19_000000_create_failed_jobs_table', 1),
-(20, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(21, '2022_11_27_070352_create_products_table', 1);
+(22, '2014_10_12_000000_create_users_table', 1),
+(23, '2014_10_12_100000_create_password_resets_table', 1),
+(24, '2019_08_19_000000_create_failed_jobs_table', 1),
+(25, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(26, '2022_11_27_070352_create_products_table', 1);
 
 -- --------------------------------------------------------
 
@@ -100,6 +100,7 @@ CREATE TABLE `personal_access_tokens` (
 CREATE TABLE `products` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -109,11 +110,11 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
-(1, 'Product1', 'assetBG1.jpg', '2022-12-05 03:18:28', '2022-12-05 03:18:28'),
-(2, 'Product2', 'assetBG2.jpg', '2022-12-05 03:18:34', '2022-12-05 03:18:34'),
-(3, 'Product3', 'assetBG3.jpg', '2022-12-05 03:18:41', '2022-12-05 03:18:41'),
-(4, 'Product4', 'assetBG4.jpg', '2022-12-05 03:18:50', '2022-12-05 03:18:50');
+INSERT INTO `products` (`id`, `name`, `link`, `img`, `created_at`, `updated_at`) VALUES
+(1, 'Product1', 'https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/2193', 'assetBG1.jpg', '2022-12-06 05:48:28', '2022-12-06 05:56:49'),
+(2, 'Product2', 'https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/6762', 'assetBG2.jpg', '2022-12-06 05:51:37', '2022-12-06 05:51:37'),
+(3, 'Product3', 'https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/527', 'assetBG3.jpg', '2022-12-06 05:52:01', '2022-12-06 05:52:01'),
+(4, 'Product4', 'https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/8392', 'assetBG4.jpg', '2022-12-06 05:52:23', '2022-12-06 05:52:23');
 
 -- --------------------------------------------------------
 
@@ -138,7 +139,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Paulus Michael', 'paullmich28@gmail.com', NULL, '$2y$10$ElXE/lySTBgT7D1kfq0LY.WiArr.F2PD/lNZUIzpDkcLjpdk6R66m', 1, NULL, '2022-12-05 01:59:02', '2022-12-05 01:59:02');
+(1, 'Paulus Michael', 'paullmich28@gmail.com', NULL, '$2y$10$MYxfRrBLAB.zktqso7pWO.w1J7Iwu/wgKb2lqxcRblvEs7POQyfEO', 1, NULL, '2022-12-06 05:36:39', '2022-12-06 05:36:39');
 
 --
 -- Indexes for dumped tables
@@ -198,7 +199,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -216,7 +217,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
